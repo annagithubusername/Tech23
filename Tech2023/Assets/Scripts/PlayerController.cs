@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed = 5f;
 
     public Rigidbody2D rb;
+    public Animator animator; //(Daphne)
 
     public Vector2 movementDir;
 
@@ -17,6 +18,7 @@ public class PlayerController : MonoBehaviour
     {
        //use get compenent method to assign the rigid body (Anna)
        rb = GetComponent<Rigidbody2D>(); 
+    
     }
 
     // Update is called once per frame (Anna)
@@ -34,6 +36,7 @@ public class PlayerController : MonoBehaviour
     {
         //the move player function (Anna)
        MovePlayer();
+
     }
 
     public void MovePlayer()
