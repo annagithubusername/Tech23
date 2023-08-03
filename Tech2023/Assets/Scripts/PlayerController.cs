@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed = 5f;
 
     public Rigidbody2D rb;
-    public Animator animator; //(Daphne)
+    public Animator isMoving; //(Daphne)
 
     public Vector2 movementDir;
 
@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour
     {
        //use get compenent method to assign the rigid body (Anna)
        rb = GetComponent<Rigidbody2D>(); 
-    
+      
     }
 
     // Update is called once per frame (Anna)
@@ -30,6 +30,10 @@ public class PlayerController : MonoBehaviour
         movementDir.x = Input.GetAxisRaw("Horizontal");
         //get veritical axis from unity (Anna)
         movementDir.y = Input.GetAxisRaw("Vertical");
+        
+         isMoving.SetFloat("Horizontal", movementDir.x); //(Daphne)
+         isMoving.SetFloat("Vertical", movementDir.y); //(Daphne)
+         isMoving.SetFloat("Speed", movementDir.sqrMagnitude); //(Daphne)
     }
     //this is called every 50 frames (Anna)
     private void FixedUpdate()
