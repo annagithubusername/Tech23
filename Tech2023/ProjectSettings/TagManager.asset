@@ -41,6 +41,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: ground
+    uniqueID: 2069203061
+    locked: 0
+  - name: decor
+    uniqueID: 1491287047
+    locked: 0
+  - name: rocks
+    uniqueID: 209060199
+    locked: 0
   - name: player
     uniqueID: 1251336891
     locked: 0
