@@ -1,45 +1,69 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using TMPro;
 
-public class TextFactChanger : MonoBehaviour
+ 
+
+public class FactTextBox : MonoBehaviour
 {
-    public Text textElement; // Reference to the Text element in the Canvas
-    public string[] factsPool;  // An array of different facts
-    private string currentFact; // The currently displayed fact
+    public TextMeshProUGUI animalFactsText;
+    private List<string> animalFacts = new List<string>();
+    private int currentFactIndex = -1;
+
+ 
 
     private void Start()
     {
-        if (textElement == null)
+        // Add some animal facts to the list.
+        animalFacts.Add("Elephants are the largest land animals.");
+        animalFacts.Add("Dolphins are highly intelligent marine mammals.");
+        animalFacts.Add("Tigers are the largest species of big cats.");
+        animalFacts.Add("Penguins are excellent swimmers.");
+
+ 
+
+        // Make sure the TextMeshProUGUI component is assigned in the inspector.
+        if (animalFactsText == null)
         {
-            Debug.LogError("Text element is not assigned!");
+            Debug.LogError("TextMeshProUGUI component not assigned!");
         }
         else
         {
-            // Initialize with a random fact from the pool
-            DisplayRandomFact();
+            animalFactsText.text = "";
         }
     }
+
+ 
 
     private void Update()
     {
-        // Check if the "B" key is pressed
+        // Check if the "B" key is pressed.
         if (Input.GetKeyDown(KeyCode.B))
         {
-            // Display a new random fact from the pool
-            DisplayRandomFact();
+            // Display the next animal fact or the first one if none is displayed.
+            DisplayNextAnimalFact();
         }
     }
 
-    private void DisplayRandomFact()
-    {
-        if (factsPool != null && factsPool.Length > 0)
-        {
-            // Choose a random fact from the pool
-            int randomIndex = Random.Range(0, factsPool.Length);
-            currentFact = factsPool[randomIndex];
+ 
 
-            // Update the Text element with the new fact
-            textElement.text = currentFact;
+    private void DisplayNextAnimalFact()
+    {
+        if (animalFacts.Count == 0)
+        {
+            animalFactsText.text = "No animal facts available.";
+            return;
         }
+
+ 
+
+        // Increment the current fact index.
+        currentFactIndex = (currentFactIndex + 1) % animalFacts.Count;
+
+ 
+
+        // Display the current fact.
+        animalFactsText.text = animalFacts[currentFactIndex];
     }
 }
