@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update (Anna)
     void Start()
     {
-       //use get compenent method to assign the rigid body (Anna)
+       //using get compenent method to assign the rigid body (Anna)
        rb = GetComponent<Rigidbody2D>(); 
       
     }
@@ -45,7 +45,7 @@ public class PlayerController : MonoBehaviour
 
     public void MovePlayer()
     {
-        //to move we need a start position, new direction, movespeed and time (Anna)
+        //start position, new direction, movespeed and time (Anna)
          rb.MovePosition(rb.position + movementDir * moveSpeed * Time.fixedDeltaTime);
     }
 }

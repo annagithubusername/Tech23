@@ -15,7 +15,7 @@ public class FactTextBox : MonoBehaviour
 
     private void Start()
     {
-        // Add some animal facts to the list.
+        // pool of deforestation facts.
         animalFacts.Add("Elephants are the largest land animals.");
         animalFacts.Add("Dolphins are highly intelligent marine mammals.");
         animalFacts.Add("Tigers are the largest species of big cats.");
