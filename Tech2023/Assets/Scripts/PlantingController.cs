@@ -11,12 +11,15 @@ public class PlantingController : MonoBehaviour
    
    private Transform player;
    private SpriteRenderer DirtSpace;
+   
+
 
     // Start is called before the first frame update
     void Start()
     {
       player = GameObject.FindGameObjectWithTag("THE PANDA").transform;  //This finds the Transform for the player with the tag "THE PANDA"
-        DirtSpace = GetComponent<SpriteRenderer>(); //stores the dirt
+      DirtSpace = GetComponent<SpriteRenderer>(); //stores the dirt
+      
     }
 
     // Update is called once per frame
@@ -44,5 +47,6 @@ public class PlantingController : MonoBehaviour
         DirtSpace.sprite = bambooIsPlanted;
     }
 }
+    
 
 }

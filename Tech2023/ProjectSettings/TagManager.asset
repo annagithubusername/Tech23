@@ -48,9 +48,12 @@ TagManager:
   - name: decor
     uniqueID: 1491287047
     locked: 0
-  - name: rocks
+  - name: rocks and Dirt
     uniqueID: 209060199
     locked: 0
   - name: player
     uniqueID: 1251336891
+    locked: 0
+  - name: 'Bamboo '
+    uniqueID: 2897775655
     locked: 0
