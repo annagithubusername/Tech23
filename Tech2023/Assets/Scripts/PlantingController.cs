@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class PlantingController : MonoBehaviour
 {
@@ -19,7 +20,8 @@ public class PlantingController : MonoBehaviour
     {
       player = GameObject.FindGameObjectWithTag("THE PANDA").transform;  //This finds the Transform for the player with the tag "THE PANDA"
       DirtSpace = GetComponent<SpriteRenderer>(); //stores the dirt
-      
+      //This is what activates the bamboo countdown counter
+    
     }
 
     // Update is called once per frame
@@ -39,12 +41,18 @@ public class PlantingController : MonoBehaviour
       return distance <= interactDistance; //Basically confirms if panda is in correct range
     }
 
+    private float bambooNum = 0;
+    public TextMeshProUGUI textBamboo;
+
    void PlantBamboo() //Plants bamboo
 {
     if (DirtSpace.sprite != bambooIsPlanted)//Checks if the closest dirt has alreay been planted  
     {
       //Switches the dirt sprite with the planted bamboo sprite
         DirtSpace.sprite = bambooIsPlanted;
+        bambooNum++;
+      textBamboo.text = bambooNum.ToString();
+    
     }
 }
     

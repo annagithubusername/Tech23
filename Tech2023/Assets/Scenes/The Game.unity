@@ -449,6 +449,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bambooIsPlanted: {fileID: 1853695183, guid: d6da11b897005449d9e0f261a14a5e46, type: 3}
   interactDistance: 2
+  textBamboo: {fileID: 2105168744}
 --- !u!212 &70776425
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -35363,6 +35364,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bambooIsPlanted: {fileID: 1853695183, guid: d6da11b897005449d9e0f261a14a5e46, type: 3}
   interactDistance: 2
+  textBamboo: {fileID: 2105168744}
 --- !u!212 &395297879
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -35798,6 +35800,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bambooIsPlanted: {fileID: 1853695183, guid: d6da11b897005449d9e0f261a14a5e46, type: 3}
   interactDistance: 2
+  textBamboo: {fileID: 2105168744}
 --- !u!212 &470956874
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -37198,6 +37201,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bambooIsPlanted: {fileID: 1853695183, guid: d6da11b897005449d9e0f261a14a5e46, type: 3}
   interactDistance: 2
+  textBamboo: {fileID: 2105168744}
 --- !u!212 &637903470
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -37433,6 +37437,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bambooIsPlanted: {fileID: 1853695183, guid: d6da11b897005449d9e0f261a14a5e46, type: 3}
   interactDistance: 2
+  textBamboo: {fileID: 2105168744}
 --- !u!1 &773245026
 GameObject:
   m_ObjectHideFlags: 0
@@ -38641,6 +38646,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bambooIsPlanted: {fileID: 1853695183, guid: d6da11b897005449d9e0f261a14a5e46, type: 3}
   interactDistance: 2
+  textBamboo: {fileID: 2105168744}
 --- !u!212 &949502422
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -41644,6 +41650,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bambooIsPlanted: {fileID: 1853695183, guid: d6da11b897005449d9e0f261a14a5e46, type: 3}
   interactDistance: 2
+  textBamboo: {fileID: 2105168744}
 --- !u!212 &1598008004
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -47919,7 +47926,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 10
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8a89fa14b10d46a99122fd4f73fca9a2, type: 2}
   m_sharedMaterial: {fileID: 2140474, guid: 8a89fa14b10d46a99122fd4f73fca9a2, type: 2}
