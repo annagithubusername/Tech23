@@ -31,9 +31,10 @@ public class PlayerController : MonoBehaviour
         //get veritical axis from unity (Anna)
         movementDir.y = Input.GetAxisRaw("Vertical");
         
-         isMoving.SetFloat("Horizontal", movementDir.x); //(Daphne)
-         isMoving.SetFloat("Vertical", movementDir.y); //(Daphne)
-         isMoving.SetFloat("Speed", movementDir.sqrMagnitude); //(Daphne)
+        //isMoving is a animator that controls when an animation runs depending on its horiontal and vertical movement(Daphne)
+         isMoving.SetFloat("Horizontal", movementDir.x); //sets the horizontal parameter to move left and right(Daphne) 
+         isMoving.SetFloat("Vertical", movementDir.y); //sets the parameter float to move up and down (Daphne)
+         isMoving.SetFloat("Speed", movementDir.sqrMagnitude); //calculates the squared magnitude of the vector called movementDir (Daphne)
     }
     //this is called every 50 frames (Anna)
     private void FixedUpdate()
