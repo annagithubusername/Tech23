@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
-    //player move speed
+    //set the player move speed
     public float moveSpeed = 5f;
 
     public Rigidbody2D rb;
@@ -49,4 +50,14 @@ public class PlayerController : MonoBehaviour
         //start position, new direction, movespeed and time (Anna)
          rb.MovePosition(rb.position + movementDir * moveSpeed * Time.fixedDeltaTime);
     }
+    
+    //when the fire character collides with the panda the game over scene will come up.
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("theFire"))
+        {
+            SceneManager.LoadScene("GameOver");
+        }
+    }
+
 }

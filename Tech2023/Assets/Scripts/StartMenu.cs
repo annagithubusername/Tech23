@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MainMenu : MonoBehaviour
+public class StartMenu : MonoBehaviour
 {
-   public void PlayGame()
+   public void play()
    {
     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
    }
-   public void Settings()
+   public void settings()
    {
     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+2);
    }

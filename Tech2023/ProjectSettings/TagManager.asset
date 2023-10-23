@@ -6,11 +6,13 @@ TagManager:
   tags:
   - THE PANDA
   - Dirt Patch
+  - THE FIRE
+  - theFire
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - fire
   - Water
   - UI
   - 
@@ -54,6 +56,9 @@ TagManager:
     locked: 0
   - name: player
     uniqueID: 1251336891
+    locked: 0
+  - name: fire
+    uniqueID: 2961245067
     locked: 0
   - name: 'Bamboo '
     uniqueID: 2897775655
