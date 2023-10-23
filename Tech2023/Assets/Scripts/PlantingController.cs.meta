@@ -3,7 +3,9 @@ guid: 93791d3325ad5ff448d17d4e3bc362e8
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - bambooIsPlanted: {fileID: 1853695183, guid: d6da11b897005449d9e0f261a14a5e46, type: 3}
+  - textBamboo: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

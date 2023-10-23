@@ -16,11 +16,12 @@ public class FactTextBox : MonoBehaviour
     private void Start()
     {
         // pool of deforestation facts.
-        animalFacts.Add("Elephants are the largest land animals.");
-        animalFacts.Add("Dolphins are highly intelligent marine mammals.");
-        animalFacts.Add("Tigers are the largest species of big cats.");
-        animalFacts.Add("Penguins are excellent swimmers.");
-
+        animalFacts.Add("About 50% of the world's tropical forests have been cleared already");
+        animalFacts.Add("By the year 2030, we might only have 10% of our forests left");
+        animalFacts.Add("Rainforests cover only 6% of the world’s surface");
+        animalFacts.Add("Rainforests are home to more than 50% of the plant and animal species on Earth");
+        animalFacts.Add("Every minute forests the size of 20 football fields are cut down");
+        animalFacts.Add("15% of all greenhouse gasses come from deforestation activities");
  
 
         // Make sure the TextMeshProUGUI component is assigned in the inspector.

@@ -11,50 +11,62 @@ public class PlantingController : MonoBehaviour
    public float interactDistance = 2.0f;
    
    private Transform player;
-   private SpriteRenderer DirtSpace;
    
+   
+   
+  private int bambooNum = 0;
+  public TextMeshProUGUI textBamboo;
 
 
     // Start is called before the first frame update
     void Start()
     {
       player = GameObject.FindGameObjectWithTag("THE PANDA").transform;  //This finds the Transform for the player with the tag "THE PANDA"
-      DirtSpace = GetComponent<SpriteRenderer>(); //stores the dirt
-      //This is what activates the bamboo countdown counter
+     
     
     }
 
     // Update is called once per frame
     void Update()
     {
+      
       // Checks if the "B" key has been pressed when panda is close to dirt
       if (Input.GetKeyDown(KeyCode.B) && IsThePandaNearby())
        { 
         PlantBamboo(); //Calls this function to plant the bamboo
+        Debug.Log("PlantBamboo called");    
        }
     }
     //Checks if the panda is close
     bool IsThePandaNearby()
 
-    {
-      float distance = Vector2.Distance(transform.position, player.position); // does the calculation of distance between the dirt and panda
-      return distance <= interactDistance; //Basically confirms if panda is in correct range
+    {Collider2D[] hitColliders = Physics2D.OverlapCircleAll(player.position, interactDistance);
+
+        foreach (Collider2D col in hitColliders)
+        {
+            if (col.gameObject.CompareTag("Dirt Patch"))
+            {
+                return true;
+            }
+        }
+
+        return false;
     }
 
-    private float bambooNum = 0;
-    public TextMeshProUGUI textBamboo;
-
+ 
    void PlantBamboo() //Plants bamboo
-{
-    if (DirtSpace.sprite != bambooIsPlanted)//Checks if the closest dirt has alreay been planted  
-    {
-      //Switches the dirt sprite with the planted bamboo sprite
-        DirtSpace.sprite = bambooIsPlanted;
-        bambooNum++;
-      textBamboo.text = bambooNum.ToString();
-    
-    }
-}
-    
+ {
+        Collider2D[] hitColliders = Physics2D.OverlapCircleAll(player.position, interactDistance);
 
+        foreach (Collider2D col in hitColliders)
+        {
+            if (col.gameObject.CompareTag("Dirt Patch") && col.GetComponent<SpriteRenderer>().sprite != bambooIsPlanted)
+            {
+                col.GetComponent<SpriteRenderer>().sprite = bambooIsPlanted;
+                bambooNum++;
+                textBamboo.text = bambooNum.ToString();
+                Debug.Log("Bamboo planted on dirt patch. Count: " + bambooNum);
+            }
+        }
+    }
 }
