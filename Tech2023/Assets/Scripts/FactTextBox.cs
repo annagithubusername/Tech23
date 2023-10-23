@@ -39,10 +39,10 @@ public class FactTextBox : MonoBehaviour
 
     private void Update()
     {
-        // Check if the "B" key is pressed.
+        // when player presses the b key.
         if (Input.GetKeyDown(KeyCode.B))
         {
-            // Display the next animal fact or the first one if none is displayed.
+            // the next animal fact or the first one if none is displayed.
             DisplayNextAnimalFact();
         }
     }

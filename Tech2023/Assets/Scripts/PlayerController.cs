@@ -51,7 +51,7 @@ public class PlayerController : MonoBehaviour
          rb.MovePosition(rb.position + movementDir * moveSpeed * Time.fixedDeltaTime);
     }
     
-    //when the fire character collides with the panda the game over scene will come up.
+    //when the fire character collides with the panda the game over scene will load. (Anna)
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("theFire"))
